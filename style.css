@@ -1,0 +1,197 @@
+/* variables */
+/* con root creas una variable para agregar a otras etiquetas  */
+:root {
+    --color: purple;
+}
+
+h1{
+    color: var(--color);
+
+}
+
+/* selectores
+
+selector  {
+propiedad1: valor 1;
+propiedad1: valor 2;
+}
+
+1. selectores simples (una palabra)
+    h1 {}
+2. selectores compuestos (mas de una palabra)
+    h1 span {}
+3. selectores con operadores 
+    h1 + span {}
+4. Pseudoclases
+
+
+*/
+
+
+/*  Selectores simples: etiqueta, tipo o elemento
+Son etiquetas HTML
+ */
+
+ /* selectores simples: clases
+
+ Se indican con un punto y el nombre de la clase
+ *no pueden comenzar con numeros
+ *pueden comenzar con - o _
+ *pueden tener :
+ *pueden ser de una letra 
+
+  */
+
+ .title{
+     margin:auto;
+     color:silver;
+     font-style: italic;
+ }
+ .description {
+     color:black;
+ }
+
+ .button {
+     display: inline-block;
+     padding: .75em 2em;
+     background: steelblue;
+     color: wheat;
+     border-radius: .25em;
+ }
+
+
+ /* Selector de id (simple)  no usar en css */
+
+ #title {
+     background: thistle;
+ }
+
+ /* selectores compuestos: agrupados */
+
+ h1,p {
+     color:blueviolet;
+ }
+
+ /* selectores compuestos: combinados */
+
+ h1.title{
+     color:green;
+ }
+
+ /* Selectores compuestos: descendientes */
+
+ body span {
+     color:burlywood;
+ }
+
+ /* operadores * > +  ~ */
+/* *: selecciona todo  */
+/* >: selector de hijo directo */
+/* +: selector hemano siguiente
+   ~: selecciona a los hermanos siguientes, a todos los hermanos q esten despues de el
+*/
+
+ /* * {
+     color: rosybrown;
+     font-size: 1em;
+     background: seashell;
+ } */
+
+ p > span {
+    color: black;
+    background: teal;
+ }
+
+ p + div {
+     border:1px solid;
+ }
+
+ p ~ div {
+    background: cadetblue;
+}
+
+/* selectores de atributo 
+
+Usan []
+[attr="value]
+[attr]
+
+*/
+
+[type="text"]{
+border: 1px solid red;
+}
+
+[type="number"]{
+    border: 1px solid blue;
+    }
+[required]{
+    border: 1px solid green;
+}
+[type="submit"]{
+    background: steelblue;
+    border: none;
+    color: white;
+}
+
+/* Comienza con [attrʌ="value"] 
+se puede identificar rutas 
+se puede identificar patrones 
+
+*/
+
+[type^="sub"]{
+    background: grey;
+}
+a[href^="http://"]{
+    color:black;
+    border-bottom: 1px dashed red;
+}
+    
+/* Termina con  [attr$="value"]*/
+
+a[href$=".mp4"]{
+    background: green;
+}
+
+/* Contiene [attr*="value"]*/
+
+/* a[href*="google"]{
+    color: blue;
+    background: slateblue;
+} */
+/* indicador con mayor rango para definir una variable  - important - no utilizar */
+h1 {
+    color: skyblue !important;
+}
+
+/* herencia 
+inherit
+inital
+*/
+
+body{
+    /* color:green; */
+    font-size: 1.5em;
+    text-align: center;
+}
+h2{
+    color: sandybrown;
+}
+ul{
+    color: black;
+}
+.last{
+    color:red;
+}
+
+p{
+    color:forestgreen;
+}
+a {
+    color: inherit;
+}
+span{
+    font-size: initial;
+    font-weight:in initial ;
+}
